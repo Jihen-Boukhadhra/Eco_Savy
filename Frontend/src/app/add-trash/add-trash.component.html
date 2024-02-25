@@ -1,0 +1,215 @@
+<div class="w-full  flex">
+    <app-sidebar></app-sidebar>
+
+
+    
+
+
+
+    <div class="w-full">
+        
+        <div class="w-11/12 mx-auto my-8">
+            <!-- add your trash  -->
+            <h1 class="text-3xl text-emerald-800 font-bold">Trash</h1>
+
+
+            <section class="bg-white dark:bg-gray-900">
+                <div class="container px-6 py-10 mx-auto">
+                    
+                    <h1 class="text-2xl font-semibold text-center text-gray-800 capitalize lg:text-3xl dark:text-white">
+                        help us to build a <span class="font-bold text-emerald-500">better</span> world</h1>
+
+                    <div class="grid grid-cols-1 gap-8 mt-8 xl:mt-12 xl:gap-16 md:grid-cols-2 xl:grid-cols-4">
+                        <div *ngIf="type != 'Tissu'"
+                            style="background-image: url('https://images.unsplash.com/photo-1583496597583-624c6768360c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Tissu')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center group-hover:bg-opacity-80 group-hover:bg-emerald-900  items-center h-[200px] w-full  bg-gray-900 bg-opacity-40 rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Tissu</h2>
+                                    ²
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="type == 'Tissu'"
+                            style="background-image: url('https://images.unsplash.com/photo-1583496597583-624c6768360c?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Tissu')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center bg-opacity-80 bg-emerald-900  items-center h-[200px] w-full   rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Tissu</h2>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div *ngIf="type != 'Electronics'"
+                            style="background-image: url('https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Electronics')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center group-hover:bg-opacity-80 group-hover:bg-emerald-900  items-center h-[200px] w-full  bg-gray-900 bg-opacity-40 rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Electronics</h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div *ngIf="type == 'Electronics'"
+                            style="background-image: url('https://images.unsplash.com/photo-1562408590-e32931084e23?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Electronics')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center bg-opacity-80 bg-emerald-900  items-center h-[200px] w-full   rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Electronics</h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div *ngIf="type != 'Plastic'"
+                            style="background-image: url('https://plus.unsplash.com/premium_photo-1682144492263-7623997157df?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Plastic')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center group-hover:bg-opacity-80 group-hover:bg-emerald-900  items-center h-[200px] w-full  bg-gray-900 bg-opacity-40 rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Plastic</h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div *ngIf="type == 'Plastic'"
+                            style="background-image: url('https://plus.unsplash.com/premium_photo-1682144492263-7623997157df?q=80&w=2069&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Plastic')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center bg-opacity-80 bg-emerald-900  items-center h-[200px] w-full   rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Plastic</h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div *ngIf="type != 'Verre'"
+                            style="background-image: url('https://images.unsplash.com/photo-1610821165540-80c084d50fd3?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Verre')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center group-hover:bg-opacity-80 group-hover:bg-emerald-900  items-center h-[200px] w-full  bg-gray-900 bg-opacity-40 rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Verre</h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+                        <div *ngIf="type == 'Verre'"
+                            style="background-image: url('https://images.unsplash.com/photo-1610821165540-80c084d50fd3?q=80&w=1915&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');"
+                            (click)="toggleHover('Verre')"
+                            class="flex bg-cover group flex-col items-center space-y-3 text-center bg-gray-100 rounded-xl dark:bg-gray-800">
+                            <div
+                                class=" flex justify-center bg-opacity-80 bg-emerald-900  items-center h-[200px] w-full   rounded-xl">
+                                <div>
+                                    <h2 class="text-2xl font-bold text-white sm:text-3xl">Verre</h2>
+
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </div>
+
+                </div>
+            </section>
+
+            <form class="grid">
+                <div class="mb-4">
+                    <label for="type" class="block text-gray-700 text-sm font-bold mb-2">Type:</label>
+                    <input disabled type="text" id="type" name="type" [(ngModel)]="type" value="{{type}}"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+
+                <div class="mb-4">
+                    <label for="quantity" class="block text-gray-700 text-sm font-bold mb-2">Quantité:</label>
+                    <input type="number" id="quantity" name="quantity" [(ngModel)]="quantity"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                </div>
+
+                <div class="mb-4">
+                    <label for="recyclable" class="block text-gray-700 text-sm font-bold mb-2">Is Recyclable:</label>
+                    <select id="recyclable" name="recyclable" [(ngModel)]="recyclable"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="true">Recyclable</option>
+                        <option value="false">Not Recyclable</option>
+                    </select>
+                </div>
+
+                <div class="mb-4">
+                    <label for="biodegradable" class="block text-gray-700 text-sm font-bold mb-2">Is
+                        Biodegradable:</label>
+                    <select id="biodegradable" name="biodegradable" [(ngModel)]="biodegradable"
+                        class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline">
+                        <option value="true">Biodegradable</option>
+                        <option value="false">Not Biodegradable</option>
+                    </select>
+                </div>
+
+                <button (click)="addTrash()" type="submit"
+                    class="bg-emerald-900 hover:bg-emerald-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline">Submit</button>
+            </form>
+
+        </div>
+
+        <div *ngIf="message == 'Thank you for your contribution!'" class="flower absolute ">
+            
+            <div class="f-wrapper">
+                
+                <div class="flower__line"></div>
+                <div class="f">
+                    <div class="flower__leaf flower__leaf--1"></div>
+                    <div class="flower__leaf flower__leaf--2"></div>
+                    <div class="flower__leaf flower__leaf--3"></div>
+                    <div class="flower__leaf flower__leaf--4"></div>
+                    <div class="flower__leaf flower__leaf--5"></div>
+                    <div class="flower__leaf flower__leaf--6"></div>
+                    <div class="flower__leaf flower__leaf--7"></div>
+                </div>
+            </div>
+    
+            <div class="f-wrapper f-wrapper--2">
+                <div class="flower__line"></div>
+                <div class="f">
+                    <div class="flower__leaf flower__leaf--1"></div>
+                    <div class="flower__leaf flower__leaf--2"></div>
+                    <div class="flower__leaf flower__leaf--3"></div>
+                    <div class="flower__leaf flower__leaf--4"></div>
+                    <div class="flower__leaf flower__leaf--5"></div>
+                    <div class="flower__leaf flower__leaf--6"></div>
+                    <div class="flower__leaf flower__leaf--7"></div>
+                </div>
+            </div>
+    
+            <div class="f-wrapper f-wrapper--3">
+                <div class="flower__line"></div>
+                <div class="f">
+                    <div class="flower__leaf flower__leaf--1"></div>
+                    <div class="flower__leaf flower__leaf--2"></div>
+                    <div class="flower__leaf flower__leaf--3"></div>
+                    <div class="flower__leaf flower__leaf--4"></div>
+                    <div class="flower__leaf flower__leaf--5"></div>
+                    <div class="flower__leaf flower__leaf--6"></div>
+                    <div class="flower__leaf flower__leaf--7"></div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</div>

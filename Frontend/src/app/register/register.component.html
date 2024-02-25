@@ -1,0 +1,78 @@
+<section class="bg-white dark:bg-gray-900">
+    <div class="flex justify-center min-h-screen">
+        <div class="hidden bg-cover lg:block lg:w-2/5" style="background-image: url('https://images.unsplash.com/photo-1632404954707-4465b1411e9b?q=80&w=1935&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D')">
+        </div>
+
+        <div class="flex items-center w-full max-w-3xl p-8 mx-auto lg:px-12 lg:w-3/5">
+            <div class="w-full">
+                <div *ngIf="message != ''" class="flex w-full max-w-sm overflow-hidden bg-emerald-700 text-white rounded-lg shadow-md dark:bg-gray-800">
+                    <div class="flex items-center justify-center w-12 bg-emerald-500">
+                        <svg class="w-6 h-6 text-white fill-current" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z" />
+                        </svg>
+                    </div>
+                
+                    <div class="px-4 py-2 -mx-3">
+                        <div class="mx-3">
+                            <span class="font-semibold text-white">Success</span>
+                            <p class="text-sm ">Your account was registered!</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <h1 class="text-2xl font-semibold tracking-wider text-gray-800 capitalize dark:text-white">
+                    Get your free account now.
+                </h1>
+
+
+
+                <p class="mt-4 text-gray-500 dark:text-gray-400">
+                    Let’s get you all set up so you can verify your personal account and begin setting up your profile.
+                </p>
+
+
+
+                <form class="grid grid-cols-1 gap-6 mt-8 md:grid-cols-2">
+                    <div>
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Full name</label>
+                        <input type="text" name="fullName" placeholder="Snow" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-emerald-400 dark:focus:border-emerald-400 focus:ring-emerald-400 focus:outline-none focus:ring focus:ring-opacity-40"  [(ngModel)]="fullName" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Email address</label>
+                        <input type="email" name="email" placeholder="johnsnow@example.com" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-emerald-400 dark:focus:border-emerald-400 focus:ring-emerald-400 focus:outline-none focus:ring focus:ring-opacity-40" [(ngModel)]="email" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Password</label>
+                        <input type="password" name="password" placeholder="Enter your password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-emerald-400 dark:focus:border-emerald-400 focus:ring-emerald-400 focus:outline-none focus:ring focus:ring-opacity-40" [(ngModel)]="password" />
+                    </div>
+
+                    <div>
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200">Confirm password</label>
+                        <input type="password" name="confirmPassword" placeholder="Enter your password" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-emerald-400 dark:focus:border-emerald-400 focus:ring-emerald-400 focus:outline-none focus:ring focus:ring-opacity-40" [(ngModel)]="confirmPassword" />
+                    </div>
+                    <div class="col-span-2">
+                        <label class="block mb-2 text-sm text-gray-600 dark:text-gray-200 ">Account Type</label>
+                        <select name="accountType" class="block w-full px-5 py-3 mt-2 text-gray-700 placeholder-gray-400 bg-white border border-gray-200 rounded-lg dark:placeholder-gray-600 dark:bg-gray-900 dark:text-gray-300 dark:border-gray-700 focus:border-emerald-400 dark:focus:border-emerald-400 focus:ring-emerald-400 focus:outline-none focus:ring focus:ring-opacity-40" [(ngModel)]="accountType">
+                            <option value="Receiver">Receiver</option>
+                            <option value="Provider">Provider</option>
+                        </select>
+                    </div>
+
+                    <button 
+                    (click)="register()"
+                        class="col-span-2 flex items-center justify-between w-full px-6 py-3 text-sm tracking-wide text-white capitalize transition-colors duration-300 transform bg-emerald-500 rounded-lg hover:bg-emerald-400 focus:outline-none focus:ring focus:ring-emerald-300 focus:ring-opacity-50">
+                        <span>Sign Up </span>
+
+                        <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5 rtl:-scale-x-100" viewBox="0 0 20 20" fill="currentColor">
+                            <path fill-rule="evenodd"
+                                d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z"
+                                clip-rule="evenodd" />
+                        </svg>
+                    </button>
+                </form>
+                </div>
+        </div>
+    </div>
+</section>

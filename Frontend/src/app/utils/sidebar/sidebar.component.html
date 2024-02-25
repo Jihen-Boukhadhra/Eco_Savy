@@ -1,0 +1,103 @@
+<div
+  class="flex w-[350px] h-screen flex-col sticky top-0 justify-between  bg-gradient-to-br from-emerald-700 to-emerald-950">
+  <div class="px-4 py-6">
+    <img src="../../../assets/logo_white.png" width="100" alt="">
+    <ul class="mt-6 space-y-1">
+
+      <li>
+        <a routerLink="/dashboard" class="block rounded-lg bg-emerald-900 px-4 py-2 text-sm font-medium text-white">
+          General
+        </a>
+      </li>
+
+      
+
+      <li *ngIf="user.type == 'Provider'">
+        <a routerLink="/trash"
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-emerald-900 hover:text-white">
+          Trash
+        </a>
+      </li>
+
+      <li *ngIf="user.type == 'Provider'">
+        <a routerLink="/comments"
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-emerald-900 hover:text-white">
+          Comments
+        </a>
+      </li>
+
+      <li *ngIf="user.type == 'Provider'">
+        <a routerLink="/receiver"
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-emerald-900 hover:text-white">
+          Receivers
+        </a>
+      </li>
+
+      <li *ngIf="user.type == 'Provider'">
+        <a routerLink="/rapports"
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-emerald-900 hover:text-white">
+          Rapports
+        </a>
+      </li>
+
+      <li *ngIf="user.type == 'Receiver'">
+        <a routerLink="/trash/all"
+          class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-emerald-900 hover:text-white">
+          List of Trash
+        </a>
+      </li>
+
+      <li>
+        <details class="group [&_summary::-webkit-details-marker]:hidden">
+          <summary
+            class="flex cursor-pointer items-center justify-between rounded-lg px-4 py-2 text-white hover:bg-emerald-900 hover:text-white">
+            <span class="text-sm font-medium"> Account </span>
+
+            <span class="shrink-0 transition duration-300 group-open:-rotate-180">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor">
+                <path fill-rule="evenodd"
+                  d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z"
+                  clip-rule="evenodd" />
+              </svg>
+            </span>
+          </summary>
+
+          <ul class="mt-2 space-y-1 px-4">
+            <li>
+              <a routerLink="/profile"
+                class="block rounded-lg px-4 py-2 text-sm font-medium text-white hover:bg-emerald-900 hover:text-white">
+                Details
+              </a>
+            </li>
+
+
+            <li>
+              <a routerLink="/logout">
+              <button 
+                  class="w-full rounded-lg px-4 py-2 text-sm font-medium text-white [text-align:_inherit] hover:bg-emerald-900 hover:text-white">
+                  Logout
+                </button>
+              </a>
+            </li>
+          </ul>
+        </details>
+      </li>
+    </ul>
+  </div>
+
+  <div class="sticky inset-x-0 bottom-0 text-white ">
+    <a href="#" class="flex items-center gap-2  p-4">
+
+
+      <div>
+        <p>
+          <strong class="block font-medium">{{user.name}}</strong>
+
+          <span class="font-light"> {{user.email}} </span>
+          <br>
+          <span class="underline"> Account Type : {{user.type}}  </span>
+        </p>
+      </div>
+    </a>
+  </div>
+</div>
